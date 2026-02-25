@@ -1,0 +1,139 @@
+#main {
+	background-color: rgb(200, 200, 200);
+}
+
+#calculator {
+	display: grid;
+	justify-content: center;
+}
+
+.ord_button { 
+	margin-right: 5px;
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25%;
+	border: none;
+	background: rgb(81, 81, 81);
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: TimesNewRoman;
+	cursor: pointer;
+	user-select: none;
+} 
+
+.ord_button:hover {
+	background: darkgray;
+	color: rgb(255, 100, 100);
+}
+
+.ord_button:active {
+	filter: brightness(130%);
+}
+
+.ord_button.main_op { 
+	background: rgb(30, 30, 200);
+}
+
+.ord_button.second_op { 
+	background: rgb(166, 166, 166);
+}
+
+.ord_button.execute_op { 
+	width: 109px;
+	border-radius: 13px;
+	background: rgb(30, 30, 200);
+}
+
+.ord_button.backspace {
+	margin-top: 0px;
+	border-radius: 10px;
+	margin-left: 9px;
+	background: rgb(200, 0, 0);
+}
+
+#result {
+	width: 227px;
+	height: 50px;
+	border-radius: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background: rgb(120, 120, 120);
+	color: rgb(200, 200, 200);
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: TimesNewRoman;
+}
+
+#first_row {
+	margin-top: 5px;
+}
+
+#button_clear {
+	background: rgb(200, 0, 0);
+}
+
+#backchange {
+	width: 50px;
+	height: 50px;
+	border-radius: 25%;
+	border: none;
+	background: rgb(81, 81, 81);
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: TimesNewRoman;
+	cursor: pointer;
+	user-select: none;
+}
+
+#background_select {
+	width: 100px;
+	height: 30px;
+	border-radius: 4px;
+	background: rgb(100, 100, 100);
+	color: rgb(255, 255, 255);
+}
+
+span.power {
+	font-weight: bold;
+	font-family: TimesNewRoman;
+	font-size: 0.9rem;
+	vertical-align: top;
+}
+
+#extrainfo {
+	overflow: hidden;
+	background: rgb(100, 100, 100);
+	border-radius: 25px;
+	padding-left: 10px;
+	width: 350px;
+	height: 50px;
+	animation-duration: 1s;
+	animation-name: extra_slide_reversed;
+}
+
+#extrainfo:hover {
+	animation-duration: 1s;
+	animation-name: extra_slide;
+	height: 150px;
+}
+
+@keyframes extra_slide {
+	from {
+		height: 50px;
+	}
+	to {
+		height: 150px;
+	}
+}
+
+@keyframes extra_slide_reversed {
+	from {
+		height: 150px;
+	}
+	to {
+		height: 50px;
+	}
+}

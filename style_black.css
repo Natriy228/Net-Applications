@@ -42,18 +42,25 @@
 }
 
 .ord_button.execute_op { 
-	width: 110px;
+	width: 109px;
 	border-radius: 13px;
+	background: rgb(30, 30, 200);
 }
 
-#result { 
-	width: 220px;
-	height: 38px;
+.ord_button.backspace {
+	margin-top: 0px;
 	border-radius: 10px;
-	padding-right: 7px;
-	padding-top: 12px;
+	margin-left: 9px;
+	background: rgb(200, 0, 0);
+}
+
+#result {
+	width: 227px;
+	height: 50px;
+	border-radius: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
 	background: rgb(120, 120, 120);
-	text-align: right;
 	color: rgb(200, 200, 200);
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -62,6 +69,10 @@
 
 #first_row {
 	margin-top: 5px;
+}
+
+#button_clear {
+	background: rgb(200, 0, 0);
 }
 
 #backchange {
@@ -84,6 +95,13 @@
 	border-radius: 4px;
 	background: rgb(100, 100, 100);
 	color: rgb(255, 255, 255);
+}
+
+span.power {
+	font-weight: bold;
+	font-family: TimesNewRoman;
+	font-size: 0.9rem;
+	vertical-align: top;
 }
 
 #extrainfo {
