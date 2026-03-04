@@ -29,7 +29,7 @@ window.onload = function(){
 	function onDigitButtonClicked(digit) {
 		if (op === '') {
 			if (digit === '.' && num1.includes(digit)) { return; }
-			if (digit === '0' && num1 === '0') { return; }
+			if ((digit === '0' || digit === "000") && num1 === '0') { return; }
 			if (num1 === '0' && digit != '.') { num1 = ''; }
 			num1 += digit;
 			updateDisplay(num1);
