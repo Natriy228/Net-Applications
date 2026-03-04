@@ -13,8 +13,10 @@
 	margin-top: 5px;
 	width: 50px;
 	height: 50px;
-	border-radius: 25%;
-	border: none;
+	border-radius: 8px;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
 	background: rgb(81, 81, 81);
 	color: white;
 	font-size: 1.5rem;
@@ -25,8 +27,8 @@
 } 
 
 .ord_button:hover {
-	background: darkgray;
-	color: rgb(255, 100, 100);
+	border-color: darkgrey;
+	color: rgb(255, 80, 80);
 }
 
 .ord_button:active {
@@ -34,7 +36,7 @@
 }
 
 .ord_button.main_op { 
-	background: rgb(30, 30, 200);
+	background: #72a32f;
 }
 
 .ord_button.second_op { 
@@ -43,25 +45,28 @@
 
 .ord_button.execute_op { 
 	width: 109px;
-	border-radius: 13px;
-	background: rgb(30, 30, 200);
+	border-radius: 8px;
+	background: #72a32f;
 }
 
-.ord_button.backspace {
-	margin-top: 0px;
-	border-radius: 10px;
-	margin-left: 9px;
+.ord_button.clear_op {
+	border-radius: 8px;
 	background: rgb(200, 0, 0);
+}
+
+#backspace_button {
+	margin-top: 0px;
+	margin-left: 9px;
 }
 
 #result {
 	width: 227px;
 	height: 50px;
-	border-radius: 10px;
+	border-radius: 8px;
 	padding-right: 5px;
 	padding-left: 5px;
-	background: rgb(120, 120, 120);
-	color: rgb(200, 200, 200);
+	background: white;
+	color: #6d7682;
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-family: TimesNewRoman;
@@ -69,10 +74,6 @@
 
 #first_row {
 	margin-top: 5px;
-}
-
-#button_clear {
-	background: rgb(200, 0, 0);
 }
 
 #backchange {
@@ -92,7 +93,7 @@
 #background_select {
 	width: 100px;
 	height: 30px;
-	border-radius: 4px;
+	border-radius: 8px;
 	background: rgb(100, 100, 100);
 	color: rgb(255, 255, 255);
 }
@@ -107,7 +108,7 @@ span.power {
 #extrainfo {
 	overflow: hidden;
 	background: rgb(100, 100, 100);
-	border-radius: 25px;
+	border-radius: 8px;
 	padding-left: 10px;
 	width: 350px;
 	height: 50px;
