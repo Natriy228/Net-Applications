@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Калькулятор</title>
+		<link id="theme_link" rel="stylesheet" href="parking_style_white.css">
+	</head>
+	
+	<body id="main">
+		<div id="calculator_decorator">
+			<div id="calculator">
+				<div style="display: flex">
+					<table id="result"><tr style="height: 38px"><td style = "text-align: left"></td><td style = "text-align: right">0</td></tr></table>
+					<button class="ord_button clear_op" id="backspace_button">&lt;</button>
+				</div>
+				
+				<div>
+					<div id="first_row">  
+						<button id="button_clear" class="ord_button clear_op">C</button>
+						<button id="button_sign_switch" class="ord_button second_op">+/-</button>
+						<button id="button_percent" class="ord_button second_op">%</button>
+						<button id="button_sqrt" class="ord_button second_op">√</button>
+						<button id="button_div" class="ord_button main_op">/</button>
+					</div>
+
+					<div>
+						<button id="d_button_7" class="ord_button">7</button>
+						<button id="d_button_8" class="ord_button">8</button>
+						<button id="d_button_9" class="ord_button">9</button>
+						<button id="button_sq" class="ord_button second_op">x<span class="power">2</span></button>
+						<button id="button_mul" class="ord_button main_op">*</button>
+					</div>
+
+					<div>
+						<button id="d_button_4" class="ord_button">4</button>
+						<button id="d_button_5" class="ord_button">5</button>
+						<button id="d_button_6" class="ord_button">6</button>
+						<button id="button_fact" class="ord_button second_op">x!</button>
+						<button id="button_minus" class="ord_button main_op">-</button>
+					</div>
+
+					<div>
+						<button id="d_button_1" class="ord_button">1</button>
+						<button id="d_button_2" class="ord_button">2</button>
+						<button id="d_button_3" class="ord_button">3</button>
+						<button id="button_parkingcost" class="ord_button second_op">₽</button>
+						<button id="button_plus" class="ord_button main_op">+</button>
+					</div>
+
+					<div>
+						<button id="d_button_0" class="ord_button">0</button>
+						<button id="d_button_dot" class="ord_button second_op">.</button>
+						<button id="d_button_000" class="ord_button second_op">000</button>
+						<button id="button_equal" class="ord_button execute_op">=</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<table style="width: 100%; height: 200px">
+			<tr>
+				<td style="vertical-align: top">
+					<div id="extrainfo">
+						<p style="color: rgb(255, 255, 255);">Дополнительная информация</p>
+						<p style="color: rgb(255, 255, 255);">ЛР выполнена Длютровым Тимофеем (<a href="https://github.com/Natriy228">GitHub</a>)</p>
+						<p style="color: rgb(255, 255, 255);">Цель данной лабораторной работы - <span style="color: rgb(255, 0, 0)">знакомство</span> с инструментами построения пользовательских интерфейсов web-сайтов: <span style="color: rgb(255, 0, 0)">HTML</span>, <span style="color: rgb(255, 0, 0)">CSS</span>.</p>
+					</div>
+				</td>
+				<td style="vertical-align: top">
+					<div style="display: flex; justify-content: right; align-items: end">
+						<select id="background_select">
+							<option value="white">Белая</option>
+							<option value="black">Тёмная</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript" src="parking_logic.js"></script>
+	</body>
+</html>

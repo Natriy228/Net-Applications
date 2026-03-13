@@ -3,9 +3,19 @@
 	background-size: cover;
 }
 
-#calculator {
+#calculator_decorator {
 	display: grid;
 	justify-content: center;
+}
+
+#calculator {
+	background: white;
+	border-radius: 8px;
+	width: 300px;
+	height: 340px;
+	align-self: center;
+	padding-top: 10px;
+	padding-left: 13px;
 }
 
 .ord_button { 
@@ -14,17 +24,48 @@
 	width: 50px;
 	height: 50px;
 	border-radius: 8px;
-	border-color: white;
-	border-style: solid;
+	border-color: rgb(81, 81, 81);
+	color: rgb(81, 81, 81);
 	border-width: 1px;
-	background: rgb(81, 81, 81);
-	color: white;
+	border-style: solid;
+	background-color: rgba(81, 81, 81, 0);
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-family: TimesNewRoman;
 	cursor: pointer;
 	user-select: none;
 } 
+
+.ord_button.main_op {
+	border-color: #72a32f;
+	background-color: rgba(30, 30, 200, 0);
+	color: #72a32f;
+}
+
+.ord_button.second_op { 
+	color: rgb(166, 166, 166);
+	border-color: rgb(166, 166, 166);
+}
+
+.ord_button.execute_op { 
+	width: 109px;
+	border-radius: 8px;
+	border-color: #72a32f;
+	background-color: rgba(30, 30, 200, 0);
+	color: #72a32f;
+}
+
+.ord_button.clear_op {
+	border-radius: 8px;
+	background-color: rgba(200, 0, 0, 0);
+	border-color: red;
+	color: red;
+}
+
+#backspace_button {
+	margin-top: 0px;
+	margin-left: 9px;
+}
 
 .ord_button:hover {
 	border-color: darkgrey;
@@ -35,38 +76,15 @@
 	filter: brightness(130%);
 }
 
-.ord_button.main_op { 
-	background: #72a32f;
-}
-
-.ord_button.second_op { 
-	background: rgb(166, 166, 166);
-}
-
-.ord_button.execute_op { 
-	width: 109px;
-	border-radius: 8px;
-	background: #72a32f;
-}
-
-.ord_button.clear_op {
-	border-radius: 8px;
-	background: rgb(200, 0, 0);
-}
-
-#backspace_button {
-	margin-top: 0px;
-	margin-left: 9px;
-}
-
 #result {
 	width: 227px;
 	height: 50px;
 	border-radius: 8px;
 	padding-right: 5px;
 	padding-left: 5px;
-	background: white;
-	color: #6d7682;
+	background-color: rgba(120, 120, 120);
+	border-color: red;
+	color: rgb(200, 200, 200);
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-family: TimesNewRoman;
@@ -107,7 +125,7 @@ span.power {
 
 #extrainfo {
 	overflow: hidden;
-	background: rgb(100, 100, 100);
+	background: rgba(100, 100, 100);
 	border-radius: 8px;
 	padding-left: 10px;
 	width: 350px;
