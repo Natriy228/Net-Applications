@@ -1,0 +1,35 @@
+.card {
+    width: 300px;
+    background-color: white;
+    border-width: 0px;
+    box-shadow: 2px 2px 2px lightgrey;
+    margin-left: 5px;
+}
+
+.btn-primary {
+    color: #72a32f;
+    border-color: #72a32f;
+    background-color: rgba(0, 0, 0, 0);
+
+    --bs-btn-active-color: #cfeea5;
+    --bs-btn-active-bg: rgba(0, 0, 0, 0);
+    --bs-btn-active-border-color: white;
+
+    --bs-btn-hover-color: #72a32f;
+    --bs-btn-hover-bg: rgba(0, 0, 0, 0);
+    --bs-btn-hover-border-color: white;
+}
+
+.adder {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px lightgrey;
+    width: 800px;
+}
+
+.inp-primary {
+    border-color: #72a32f;
+    border-style: solid;
+    border-radius: 4px;
+}
