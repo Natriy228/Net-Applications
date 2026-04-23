@@ -20,12 +20,11 @@
     --bs-btn-hover-border-color: white;
 }
 
-.adder {
-    display: grid;
-    justify-content: center;
+.card_control {
     margin-bottom: 20px;
     box-shadow: 2px 2px 2px lightgrey;
     width: 800px;
+    border-radius: 6px;
 }
 
 .inp-primary {
