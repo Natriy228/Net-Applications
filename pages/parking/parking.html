@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/examples/jsm/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <title>Парковка</title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../design.css" />
+</head>
+<body>
+  <div id="pageRoot">
+    <canvas id="viewer-canvas"></canvas>
+    <script src="../../idb.js"></script>
+    <script type="module" src="parking.js"></script>
+  </div>
+</body>
+</html>

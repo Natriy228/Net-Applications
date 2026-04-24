@@ -1,5 +1,4 @@
 import {ParkingCardComponent} from "../../components/parking_card/index.js";
-import {ParkingPage} from "../parking/index.js";
 import {CardControlComponent} from "../../components/card_control/index.js";
 import {HeaderComponent} from "../../components/header/index.js";
 
@@ -81,16 +80,11 @@ export class MainPage {
     }
 
     clickCard(e) {
-        const cardId = e.target.dataset.id;
-        let sourceData = 0;
-        for (let i = 0; i < this.scopeCards.length; i++) {
-            if (this.scopeCards[i].id === parseInt(cardId)) {
-                sourceData = this.scopeCards[i];
-                break;
-            }
+        let cardId = e.target.dataset.id;
+        if (cardId > 4) {
+            cardId = 1;
         }
-        const parkingPage = new ParkingPage(this.parent, sourceData, cardId, this.scopeCards);
-        parkingPage.render();
+        window.location.href = `pages/parking/parking.html?id=${cardId}`;
     }
 
     deleteCard(e) {

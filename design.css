@@ -32,3 +32,10 @@
     border-style: solid;
     border-radius: 4px;
 }
+
+#viewer-canvas {
+      width: 100vw;
+      height: 70vh;
+      display: block;
+      background: #e6ebf5;
+}

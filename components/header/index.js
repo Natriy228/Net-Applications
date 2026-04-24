@@ -16,8 +16,7 @@ export class HeaderComponent {
     }
 
     returnToMainPage() {
-        const mainPage = new MainPage(document.getElementById('root'));
-        mainPage.render(false);
+        window.location.href = `../../index.html`;
     }
 
     addHomeListener(listener) {
@@ -28,7 +27,7 @@ export class HeaderComponent {
 
     render() {
         const html = this.getHTML();
-        this.parent.insertAdjacentHTML('beforeend', html);
+        this.parent.insertAdjacentHTML('afterbegin', html);
         this.addHomeListener(this.returnToMainPage);
     }
 }
