@@ -9,7 +9,7 @@ export class ParkingCardComponent {
             <div class="card">
                 <img class="card-img-top" src="${parking_data.src}" alt="${parking_data.im_desc}">
                 <div class="card-body">
-                    <h5 class="card-title">${parking_data.title}</h5>
+                    <h5 class="card-title">${parking_data.title} (${parking_data.isp})</h5>
                     <p class="card-text">${parking_data.text}</p>
                     <table>
                         <tr>

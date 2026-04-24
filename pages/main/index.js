@@ -1,7 +1,27 @@
 import {ParkingCardComponent} from "../../components/parking_card/index.js";
-import {ParkingPage} from "../product/index.js";
+import {ParkingPage} from "../parking/index.js";
 import {CardControlComponent} from "../../components/card_control/index.js";
 import {HeaderComponent} from "../../components/header/index.js";
+
+function isPalindrom(parkingSesionID) {
+    const sInput = parkingSesionID.toString().toLowerCase();
+    const leftPart = sInput.slice(0, sInput.length / 2);
+    const rightPart = sInput.slice(sInput.length / 2 + (sInput.length % 2), sInput.length);
+    let rightPartReversed = "";
+    for (let i = rightPart.length - 1; i > -1; i--) rightPartReversed += rightPart[i];
+    return (leftPart === rightPartReversed);
+    /*
+    const sInput = parkingSesionID.toString().toLowerCase();
+    let i = 0;
+    let j = sInput.length - 1;
+    while (i < j) {
+        if (sInput[i] != sInput[j]) return false;
+        i++;
+        j--;
+    }
+    return true;
+    */
+}
 
 export class MainPage {
     constructor(parent) {
@@ -98,6 +118,8 @@ export class MainPage {
         new_card.text = this.scopeCards[0].text;
         new_card.im_desc = this.scopeCards[0].im_desc;
         new_card.page_src = this.scopeCards[0].page_src;
+        if (isPalindrom(new_card.title)) new_card.isp = "палиндром";
+        else new_card.isp = "не палиндром";
         let new_id = 0;
         for (let i = 0; i < this.scopeCards.length; i++) {
             new_id = Math.max(new_id, this.scopeCards[i].id);
@@ -129,6 +151,8 @@ export class MainPage {
             data.forEach((item) => {
                 const parkingCard = new ParkingCardComponent(this.pageRoot());
                 this.scopeCards.push(item);
+                if (isPalindrom(item.title)) item.isp = "палиндром";
+                else item.isp = "не палиндром";
                 parkingCard.render(item, this.clickCard.bind(this), this.deleteCard.bind(this));
             });
             this.init = true;
@@ -137,6 +161,8 @@ export class MainPage {
             this.scopeCards.forEach((item) => {
                 if (item.title === this.filter || this.filter === "") {
                     const parkingCard = new ParkingCardComponent(this.pageRoot());
+                    if (isPalindrom(item.title)) item.isp = "палиндром";
+                    else item.isp = "не палиндром";
                     parkingCard.render(item, this.clickCard.bind(this), this.deleteCard.bind(this));
                 }
             });

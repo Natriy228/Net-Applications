@@ -11,6 +11,7 @@ export class ParkingComponent {
                     <div class="card-body">
                         <h5 class="card-title">${data.title}</h5>
                         <p class="card-text">${data.text}</p>
+                        <p>Другие ID: ${data.otherIDs}</p>
                     </div>
                 </div>
             `
