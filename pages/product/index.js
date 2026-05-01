@@ -2,10 +2,12 @@ import {ParkingComponent} from "../../components/parking/index.js";
 import {MainPage} from "../main/index.js";
 import {HeaderComponent} from "../../components/header/index.js";
 
+import {ajax} from "../../modules/ajax.js";
+import {parkingUrls} from "../../modules/parkingUrls.js";
+
 export class ParkingPage {
-    constructor(parent, sourceData, cardID) {
+    constructor(parent, cardID) {
         this.parent = parent;
-        this.sourceData = sourceData;
         this.cardID = cardID;
     }
 
@@ -21,6 +23,17 @@ export class ParkingPage {
         );
     }
 
+    getData() {
+        ajax.get(parkingUrls.getParkingById(this.cardID), (data) => {
+            this.renderData(data);
+        })
+    }
+
+    renderData(data) {
+        const parking = new ParkingComponent(this.pageRoot);
+        parking.render(data);
+    }
+
     render() {
         this.parent.innerHTML = '';
         const html = this.getHTML();
@@ -29,8 +42,6 @@ export class ParkingPage {
         const header = new HeaderComponent(this.pageRoot);
         header.render();
 
-        const data = this.sourceData;
-        const stock = new ParkingComponent(this.pageRoot);
-        stock.render(data);
+        this.getData();
     }
 }

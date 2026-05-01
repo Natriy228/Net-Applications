@@ -20,6 +20,11 @@ export class ParkingCardComponent {
                                 <button class="btn btn-primary" id="delete-card-${parking_data.id}" data-id="${parking_data.id}">Удалить</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary" id="edit-card-${parking_data.id}" data-id="${parking_data.id}">Редактировать</button>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -39,10 +44,17 @@ export class ParkingCardComponent {
             .addEventListener("click", listener)
     }
 
-    render(data, click_listener, delete_listener) {
+    addEditListener(data, listener) {
+        document
+            .getElementById(`edit-card-${data.id}`)
+            .addEventListener("click", listener)
+    }
+
+    render(data, click_listener, delete_listener, edit_listener) {
         const card_html = this.getCardHTML(data);
         this.parent.insertAdjacentHTML('beforeend', card_html);
         this.addClickListener(data, click_listener);
         this.addDeleteListener(data, delete_listener);
+        this.addEditListener(data, edit_listener);
     }
 }

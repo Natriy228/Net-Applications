@@ -28,7 +28,7 @@ export class HeaderComponent {
 
     render() {
         const html = this.getHTML();
-        this.parent.insertAdjacentHTML('beforeend', html);
+        this.parent.insertAdjacentHTML('afterBegin', html);
         this.addHomeListener(this.returnToMainPage);
     }
 }
