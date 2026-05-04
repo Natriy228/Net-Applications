@@ -18,13 +18,13 @@ const getParkingById = (req, res) => {
 };
 
 const createParking = (req, res) => {
-    const { src, title, text } = req.body;
+    const { src, title, text, im_desc, page_src } = req.body;
     
     if (!src || !title || !text) {
         return res.status(400).json({ error: 'Не все поля заполнены' });
     }
     
-    const newParking = parkingService.create({ src, title, text });
+    const newParking = parkingService.create({ src, title, text, im_desc, page_src });
     res.status(201).json(newParking);
 };
 

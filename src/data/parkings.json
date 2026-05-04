@@ -1,34 +1,34 @@
 [
   {
     "id": 1,
-    "src": "../../resources/MBimage.png",
+    "src": "resources/images/MBimage.png",
     "title": "Главное здание",
     "text": "Парковка у главного входа в ГУК МГТУ",
     "im_desc": "Изображение ГЗ со стороны праковки",
-    "custom": false
+    "page_src": "resources/images/MBimage cropped.JPG"
   },
   {
     "id": 2,
-    "src": "../../resources/LLCimage.png",
+    "src": "resources/images/LLCimage.png",
     "title": "Учебно-лабораторный корпус",
     "text": "Парковка у УЛК МГТУ",
     "im_desc": "Изображение УЛК со стороны праковки",
-    "custom": false
+    "page_src": "resources/images/LLCimage cropped.JPG"
   },
   {
     "id": 3,
-    "src": "../../resources/SCimage.png",
+    "src": "resources/images/SCimage.png",
     "title": "Спортивный комплекс",
     "text": "Парковка на территории СК МГТУ\n",
     "im_desc": "Изображение СК",
-    "custom": false
+    "page_src": "resources/images/SCimage cropped.JPG"
   },
   {
     "id": 4,
-    "src": "../../resources/CCimage.png",
+    "src": "resources/images/CCimage.png",
     "title": "Конгресс-центр",
     "text": "Парковка во дворе конгресс-центра МГТУ",
     "im_desc": "Изображение конгресс-центра",
-    "custom": false
+    "page_src": "resources/images/CCimage cropped.JPG"
   }
 ]

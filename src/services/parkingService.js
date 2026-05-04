@@ -29,6 +29,7 @@ const create = (stockData) => {
         : 1;
         
     const newStock = { id: newId, ...stockData };
+    console.log(stockData);
     Parkings.push(newStock);
     fileService.writeData(dataFilePath, Parkings);
     
