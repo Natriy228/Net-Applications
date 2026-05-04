@@ -39,8 +39,6 @@ export class CardEditPage {
                                 </td>
                             </tr>
                         </table>
-
-                        <button class="btn btn-primary" id="complete">Завершить редактирование</button>
                 </div>
             `
         );
@@ -94,11 +92,11 @@ export class CardEditPage {
             .addEventListener("click", this.changeImage)
     }
 
-    addCompleteListener() {
-        document
-            .getElementById("complete")
-            .addEventListener("click", this.completeEditing.bind(this))
-    }
+    // addCompleteListener() {
+    //     document
+    //         .getElementById("complete")
+    //         .addEventListener("click", this.completeEditing.bind(this))
+    // }
 
     renderData(data) {
         const parkingCard = new EditParkingCardComponent(document.getElementById('edit-space'));
@@ -116,6 +114,6 @@ export class CardEditPage {
         this.getData();
 
         this.addIChangeListener();
-        this.addCompleteListener();
+        // this.addCompleteListener();
     }
 }
