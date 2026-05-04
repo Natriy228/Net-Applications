@@ -44,7 +44,7 @@ export class MainPage {
 
     deleteCard(e) {
         const cardId = e.target.dataset.id;
-        ajax.delete(parkingUrls.removeParkingById(cardId), (rdata) => {this.render();});
+        ajax.delete(parkingUrls.removeParkingById(cardId), (rdata) => {console.log(rdata); this.render();});
     }
 
     addCard(e) {
