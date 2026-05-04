@@ -10,6 +10,8 @@ export class CardEditPage {
         this.parent = parent;
         this.cardID = cardID;
         this.isEdit = isEdit;
+        this.jdata = "";
+        this.imageChanged = false;
     }
 
     get pageRoot() {
@@ -39,8 +41,7 @@ export class CardEditPage {
                                 </td>
                             </tr>
                         </table>
-
-                        <button class="btn btn-primary" id="complete">Завершить редактирование</button>
+                    <button class="btn btn-primary" id="complete">Завершить редактирование</button>
                 </div>
             `
         );
@@ -50,12 +51,14 @@ export class CardEditPage {
         if (this.isEdit) {
             ajax.get(parkingUrls.getParkingById(this.cardID), (data) => {
                 this.renderData(data);
+                this.jdata = JSON.stringify(data);
             })
         }
         else {
             const data = {
                 title: "",
-                text: ""
+                text: "",
+                src: ""
             }
             this.renderData(data);
         }
@@ -63,10 +66,11 @@ export class CardEditPage {
 
     changeImage() {
         document.getElementsByClassName("card-img-top")[0].src = document.getElementById("new_image_src").value;
+        this.imageChanged = true;
     }
 
     completeEditing() {
-        const data = {
+        let data = {
             src: document.getElementsByClassName("card-img-top")[0].src,
             title: document.getElementById("new_card_title").value,
             text: document.getElementById("new_card_desc").value,
@@ -74,24 +78,24 @@ export class CardEditPage {
             page_src: ""
         };
         if (this.isEdit) {
+            const pdata = JSON.parse(this.jdata);
+            console.log(this.imageChanged);
+            if (!this.imageChanged) data.src = pdata.src;
+            data.im_desc = pdata.im_desc;
+            data.page_src = pdata.page_src;
             ajax.patch(parkingUrls.updateParkingById(this.cardID), data, (rdata) => {console.log(rdata)});
-            console.log("patch");
         }
         else {
             ajax.post(parkingUrls.createParking(), data, (rdata) => {console.log(rdata)});
-            console.log("post");
         }
-
-        /*
         const mainPage = new MainPage(document.getElementById('root'));
         mainPage.render();
-        */
     }
 
     addIChangeListener() {
         document
             .getElementById("select-image")
-            .addEventListener("click", this.changeImage)
+            .addEventListener("click", this.changeImage.bind(this))
     }
 
     addCompleteListener() {

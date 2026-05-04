@@ -3,21 +3,21 @@ export class EditParkingCardComponent {
         this.parent = parent;
     }
 
-    getCardHTML(parking_data) {
+    getCardHTML() {
         return (
         `
             <div class="card">
-                <img class="card-img-top" src="https://cdn-user30887.skyeng.ru/uploads/67699897a7e97794600638.webp" alt="Preview of new image">
+                <img class="card-img-top" src="" alt="Preview of new image">
                 <div class="card-body">
                     <input class="inp-primary" type="text" id="new_card_title" style="width: 270px; margin-bottom: 7px">
                     <input class="inp-primary" type="text" id="new_card_desc" style="width: 270px; margin-bottom: 7px">
                     <table>
                         <tr>
                             <td>
-                                <button class="btn btn-primary" id="click-card-${parking_data.id}" data-id="${parking_data.id}">Припарковать</button>
+                                <button class="btn btn-primary" id="" data-id="">Припарковать</button>
                             </td>
                             <td>
-                                <button class="btn btn-primary" id="delete-card-${parking_data.id}" data-id="${parking_data.id}">Удалить</button>
+                                <button class="btn btn-primary" id="" data-id="">Удалить</button>
                             </td>
                         </tr>
                     </table>
@@ -28,7 +28,7 @@ export class EditParkingCardComponent {
     }
 
     render(data) {
-        const card_html = this.getCardHTML(data);
+        const card_html = this.getCardHTML();
         this.parent.insertAdjacentHTML('beforeend', card_html);
 
         document.getElementById("new_card_title").value = data.title;
