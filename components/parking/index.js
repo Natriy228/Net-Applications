@@ -3,6 +3,12 @@ export class ParkingComponent {
         this.parent = parent
     }
 
+    uniqueParkings(parkings1, parkings2) {
+        let result = [];
+        parkings1.forEach((item) => {if (!parkings2.includes(item)) result.push(item);});
+        return result;
+    }
+
     getHTML(data) {
         return (
             `
@@ -19,7 +25,8 @@ export class ParkingComponent {
     }
 
     render(data) {
+        data.otherIDs = this.uniqueParkings([1, 2, 3, 4], [data.id]);
         const html = this.getHTML(data)
-        this.parent.insertAdjacentHTML('beforeend', html)
+        this.parent.insertAdjacentHTML('afterbegin', html)
     }
 }

@@ -7,7 +7,7 @@ import {ParkingComponent} from '../../components/parking/index.js';
 import {HeaderComponent} from '../../components/header/index.js';
 
 // ---- ПРЕСЕТЫ ----
-const PRESETS = [
+let PRESETS = [
   {
     id: 1,
     title: "Главное здание",
@@ -48,12 +48,15 @@ const PRESETS = [
 // ---- ГЛОБАЛЬНЫЕ camera и controls ----
 let camera, controls;
 
-const header = new HeaderComponent(document.getElementById("pageRoot"));
-header.render();
-
 // ---- ВЫБОР МОДЕЛИ ----
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
+
+const parking = new ParkingComponent(document.getElementById("pageRoot"));
+parking.render(PRESETS[(id - 1) % 4]);
+
+const header = new HeaderComponent(document.getElementById("pageRoot"));
+header.render();
 
 let modelData = null;
 let title = '';
