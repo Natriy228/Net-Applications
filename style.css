@@ -1,6 +1,5 @@
 #main {
-	background-image: url('background.png');
-	background-size: cover;
+	background-color: white;
 }
 
 #calculator {
@@ -13,10 +12,12 @@
 	margin-top: 5px;
 	width: 50px;
 	height: 50px;
-	border-radius: 25%;
-	border: none;
-	background: rgb(81, 81, 81);
-	color: white;
+	border-radius: 8px;
+	border-color: rgb(81, 81, 81);
+	color: rgb(81, 81, 81);
+	border-width: 1px;
+	border-style: solid;
+	background-color: rgba(81, 81, 81, 0);
 	font-size: 1.5rem;
 	font-weight: bold;
 	font-family: TimesNewRoman;
@@ -24,36 +25,54 @@
 	user-select: none;
 } 
 
+.ord_button.main_op {
+	border-color: #72a32f;
+	background-color: rgba(30, 30, 200, 0);
+	color: #72a32f;
+}
+
+.ord_button.second_op { 
+	color: rgb(166, 166, 166);
+	border-color: rgb(166, 166, 166);
+}
+
+.ord_button.execute_op { 
+	width: 109px;
+	border-radius: 8px;
+	border-color: #72a32f;
+	background-color: rgba(30, 30, 200, 0);
+	color: #72a32f;
+}
+
+.ord_button.clear_op {
+	border-radius: 8px;
+	background-color: rgba(200, 0, 0, 0);
+	border-color: red;
+	color: red;
+}
+
+#backspace_button {
+	margin-top: 0px;
+	margin-left: 9px;
+}
+
 .ord_button:hover {
-	background: darkgray;
-	color: rgb(255, 100, 100);
+	border-color: darkgrey;
+	color: rgb(255, 80, 80);
 }
 
 .ord_button:active {
 	filter: brightness(130%);
 }
 
-.ord_button.main_op { 
-	background: rgb(30, 30, 200);
-}
-
-.ord_button.second_op { 
-	background: rgb(166, 166, 166);
-}
-
-.ord_button.execute_op { 
-	width: 110px;
-	border-radius: 13px;
-}
-
-#result { 
-	width: 220px;
-	height: 38px;
-	border-radius: 10px;
-	padding-right: 7px;
-	padding-top: 12px;
-	background: rgb(120, 120, 120);
-	text-align: right;
+#result {
+	width: 227px;
+	height: 50px;
+	border-radius: 8px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-color: rgba(120, 120, 120);
+	border-color: red;
 	color: rgb(200, 200, 200);
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -81,15 +100,23 @@
 #background_select {
 	width: 100px;
 	height: 30px;
-	border-radius: 4px;
-	background: rgb(100, 100, 100);
-	color: rgb(255, 255, 255);
+	border-radius: 8px;
+	background: rgba(100, 100, 100, 0);
+	border-color: #72a32f;
+	color: #72a32f;
+}
+
+span.power {
+	font-weight: bold;
+	font-family: TimesNewRoman;
+	font-size: 0.9rem;
+	vertical-align: top;
 }
 
 #extrainfo {
 	overflow: hidden;
-	background: rgb(100, 100, 100);
-	border-radius: 25px;
+	background: #72a32f;
+	border-radius: 8px;
 	padding-left: 10px;
 	width: 350px;
 	height: 50px;
