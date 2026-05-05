@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Калькулятор</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body id="main">
+		<div id="calculator">
+			<div id="result">
+				0
+			</div>
+			
+			<div>
+				<div id="first_row">  
+					<button id="button_clear" class="ord_button main_op">C</button>
+					<button id="button_sign_switch" class="ord_button second_op">+/-</button>
+					<button id="button_percent" class="ord_button second_op">%</button>
+					<button id="button_div" class="ord_button main_op">/</button>
+				</div>
+
+				<div>
+					<button id="button_7" class="ord_button">7</button>
+					<button id="button_8" class="ord_button">8</button>
+					<button id="button_9" class="ord_button">9</button>
+					<button id="button_mul" class="ord_button main_op">x</button>
+				</div>
+
+				<div>
+					<button id="button_4" class="ord_button">4</button>
+					<button id="button_5" class="ord_button">5</button>
+					<button id="button_6" class="ord_button">6</button>
+					<button id="button_minus" class="ord_button main_op">-</button>
+				</div>
+
+				<div>
+					<button id="button_1" class="ord_button">1</button>
+					<button id="button_2" class="ord_button">2</button>
+					<button id="button_3" class="ord_button">3</button>
+					<button id="button_plus" class="ord_button main_op">+</button>
+				</div>
+
+				<div>
+					<button id="button_0" class="ord_button">0</button>
+					<button id="button_dot" class="ord_button second_op">.</button>
+					<button id="button_equal" class="ord_button main_op execute_op">=</button>
+				</div>
+			</div>
+		</div>
+		<table style="width: 100%; height: 200px">
+			<tr>
+				<td style="vertical-align: top">
+					<div id="extrainfo">
+						<p style="color: rgb(255, 255, 255);">Дополнительная информация</p>
+						<p style="color: rgb(255, 255, 255);">ЛР выполнена Длютровым Тимофеем (<a href="https://github.com/Natriy228">GitHub</a>)</p>
+						<p style="color: rgb(255, 255, 255);">Цель данной лабораторной работы - <span style="color: rgb(255, 0, 0)">знакомство</span> с инструментами построения пользовательских интерфейсов web-сайтов: <span style="color: rgb(255, 0, 0)">HTML</span>, <span style="color: rgb(255, 0, 0)">CSS</span>.</p>
+					</div>
+				</td>
+				<td style="vertical-align: top">
+					<div style="display: grid; justify-content: right; align-items: end">
+						<select id="background_select">
+							<option value="white">Белая</option>
+							<option value="black">Тёмная</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
