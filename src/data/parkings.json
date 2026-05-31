@@ -1,34 +1,34 @@
 [
   {
     "id": 1,
-    "src": "resources/images/MBimage.png",
+    "src": "https://rossaprimavera.ru/static/files/e0c59750f472.jpg",
     "title": "Главное здание",
     "text": "Парковка у главного входа в ГУК МГТУ",
     "im_desc": "Изображение ГЗ со стороны праковки",
-    "page_src": "resources/images/MBimage cropped.JPG"
+    "page_src": "https://rossaprimavera.ru/static/files/e0c59750f472.jpg"
   },
   {
     "id": 2,
-    "src": "resources/images/LLCimage.png",
+    "src": "https://s0.rbk.ru/v6_top_pics/media/img/7/02/756032152768027.jpg",
     "title": "Учебно-лабораторный корпус",
     "text": "Парковка у УЛК МГТУ",
     "im_desc": "Изображение УЛК со стороны праковки",
-    "page_src": "resources/images/LLCimage cropped.JPG"
+    "page_src": "https://s0.rbk.ru/v6_top_pics/media/img/7/02/756032152768027.jpg"
   },
   {
     "id": 3,
-    "src": "resources/images/SCimage.png",
+    "src": "https://n1s1.hsmedia.ru/77/30/af/7730af76a3d2cdcc76f883873e446f4f/656x438_1_a10311e96e2c1fef8b0cada0806f75f1@2080x1386_0xiXwLwe9w_8992752221569602059.jpg.webp",
     "title": "Спортивный комплекс",
     "text": "Парковка на территории СК МГТУ\n",
     "im_desc": "Изображение СК",
-    "page_src": "resources/images/SCimage cropped.JPG"
+    "page_src": "https://n1s1.hsmedia.ru/77/30/af/7730af76a3d2cdcc76f883873e446f4f/656x438_1_a10311e96e2c1fef8b0cada0806f75f1@2080x1386_0xiXwLwe9w_8992752221569602059.jpg.webp"
   },
   {
     "id": 4,
-    "src": "resources/images/CCimage.png",
+    "src": "https://www.mskagency.ru/b/c/963273.jpg",
     "title": "Конгресс-центр",
     "text": "Парковка во дворе конгресс-центра МГТУ",
     "im_desc": "Изображение конгресс-центра",
-    "page_src": "resources/images/CCimage cropped.JPG"
+    "page_src": "https://www.mskagency.ru/b/c/963273.jpg"
   }
 ]
