@@ -34,9 +34,6 @@ export class CardEditPage {
                                 <td style="padding-top: 7px">
                                     <input class="inp-primary" type="text" id="new_image_src" style="width: 270px; margin-bottom: 7px">
                                 </td>
-                                <td>
-                                    <button class="btn btn-primary" id="select-image">Применить</button>
-                                </td>
                             </tr>
                         </table>
                 </div>
