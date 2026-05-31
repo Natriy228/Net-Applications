@@ -19,7 +19,7 @@ export class MainPage {
     getHTML() {
         return (
             `
-                <div id="main-page" class="d-flex flex-wrap" style="justify-content: left"><div/>
+                <div class="d-flex flex-wrap" style="justify-content: center"><div id="main-page" class="d-flex flex-wrap" style="justify-content: left; width: 85%"></div></div>
             `
         );
     }
